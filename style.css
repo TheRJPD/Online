@@ -77,6 +77,11 @@ h2, h3 {
   z-index: 9999;
 }
 
+/* Hidden state */
+.floating-cart-hidden {
+  display: none;
+}
+
 /* Keep navbar from hiding it */
 .navbar {
   padding-right: 90px;

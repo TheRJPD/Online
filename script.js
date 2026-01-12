@@ -93,6 +93,16 @@ function clearCart() {
   saveCart();
 }
 
+function updateFloatingCartTotal() {
+  let total = 0;
+  Object.keys(cart).forEach(item => {
+    total += menuData[item].price * cart[item];
+  });
+
+  const el = document.getElementById("cartTotal");
+  if (el) el.innerText = `₹${total}`;
+}
+
 function sendWhatsApp() {
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;

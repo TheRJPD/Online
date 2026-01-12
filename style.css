@@ -60,7 +60,20 @@ h2, h3 {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
-<!-- -->
+
+/* Menu QR Center */
+.qr-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.menu-qr {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  border: 4px solid #8b0000;
+  border-radius: 10px;
+}
 
 /* Floating Cart Top Right */
 .floating-cart-top {

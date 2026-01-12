@@ -176,3 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartTotalUI();
 });
 
+// Redirect to Home page on browser refresh
+if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
+  if (!window.location.pathname.endsWith("index.html")) {
+    window.location.href = "index.html";
+  }
+}
+

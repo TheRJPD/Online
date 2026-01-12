@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+</nav>
+
+<section>
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+
+  <h3>Customer Details</h3>
+  <input id="name" placeholder="Your Name">
+  <input id="phone" placeholder="Phone Number">
+
+  <button class="order" onclick="sendWhatsApp()">Order via WhatsApp</button>
+  <button class="order" onclick="sendEmail()">Order via Email</button>
+</section>
+
+</body>
+</html>
 

@@ -15,7 +15,7 @@ function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateMenuQty();
   renderCart();
-<!--  updateFloatingCartTotal(); -->
+  updateFloatingCartTotal();
   updateCartTotalUI();
 }
 
@@ -172,7 +172,7 @@ ${orderText()}`;
 document.addEventListener("DOMContentLoaded", () => {
   updateMenuQty();            // sync menu quantities
   renderCart();               // render cart if on cart page
-  <! --updateFloatingCartTotal();  // update floating ₹ total-->
+  updateFloatingCartTotal();  // update floating ₹ total
   updateCartTotalUI();
 });
 

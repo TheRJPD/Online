@@ -65,7 +65,7 @@ h2, h3 {
 /* Floating Cart Top Right */
 .floating-cart-top {
   position: fixed;
-  top: 5px;
+  top: 3px;
   right: 16px;
   background: #ffffff;
   color: #8b0000;

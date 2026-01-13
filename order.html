@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Order Cart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Cart | The Rajputana Darbar</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-  
-<a href="order.html" class="floating-cart-top" id="floatingCart">
-  🛒 <span id="cartTotal">₹0</span>
-</a>
 
 <body>
 
-<nav>
-  <a href="index.html"><img src="logo.png" alt="Logo" class="nav-logo"></a>
-  <a href="index.html">Home</a>
-  <a href="menu.html">Menu</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="order.html">Order Cart</a>
-<!--  
-  <div class="nav-right">
-    <a href="order.html" class="nav-cart">
-      🛒 <span id="cartTotal">₹0</span>
-    </a>
-  </div>
--->
-</nav>
+  <a href="order.html" class="floating-cart-top" id="floatingCart">
+    🛒 <span id="cartTotal">₹0</span>
+  </a>
 
-<section>
-  <h2>Your Cart</h2>
-  <div id="cartItems"></div>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="nav-logo">
+      </a>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html">Order Cart</a>
+    </div>
+  </nav>
 
-  <h3>Customer Details</h3>
-  <input id="name" placeholder="Your Name">
-  <input id="phone" placeholder="Phone Number">
+  <main class="content-wrapper">
+    <section>
+      <h2>Your Cart</h2>
+      <div id="cartItems">
+        </div>
 
-  <button class="order" onclick="sendWhatsApp()">Order via WhatsApp</button>
-  <button class="order" onclick="sendEmail()">Order via Email</button>
-</section>
+      <div class="customer-details" style="margin-top: 30px;">
+        <h3>Customer Details</h3>
+        <p style="font-size: 0.9em; color: #666;">Please provide your details to proceed with the order.</p>
+        <input id="name" type="text" placeholder="Your Name">
+        <input id="phone" type="tel" placeholder="Phone Number">
+
+        <div style="margin-top: 20px;">
+          <button class="order" onclick="sendWhatsApp()">Order via WhatsApp</button>
+          <button class="order" onclick="sendEmail()">Order via Email</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 The Rajputana Darbar. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
-

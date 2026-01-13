@@ -128,7 +128,7 @@ input {
 /* Navigation Logo Styling */
 .nav-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -139,11 +139,11 @@ input {
   vertical-align: middle;
 }
 
-/* Ensure nav padding accounts for the logo */
+/* Nav(menu bar) padding */
 nav {
   background: #8b0000;
   padding: 5px 10px;
-  text-align: left;
+  text-align: center;
 }
 
 footer {

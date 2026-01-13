@@ -130,21 +130,28 @@ footer {
   background: #eee;
 }
 
-/* Watermark Logic: Placed below the Nav Bar */
-body::before {
+/* Container for content below nav */
+.content-wrapper {
+  position: relative;
+  min-height: calc(100vh - 50px);
+  z-index: 1;
+}
+
+/* Watermark applied only to the content area */
+.content-wrapper::before {
   content: "";
-  position: absolute;       /* Fixed to document flow, not screen */
-  top: 50px;                /* Adjusted to start exactly below your nav */
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% - 50px);
+  height: 100%;
   background-image: url("watermark.png");
   background-repeat: no-repeat;
-  background-position: center 50px;
-  background-size: 500px;
-  opacity: 0.08;            /* Subtle appearance */
-  z-index: -1;              /* Behind content */
-  pointer-events: none;     /* Allows clicking through to buttons */
+  background-position: center 100px;
+  background-size: 400px;
+  opacity: 0.05; /* Adjusted for better visibility */
+  z-index: -1;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {

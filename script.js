@@ -25,13 +25,13 @@ function updateFloatingCartTotal() {
     total += menuData[item].price * cart[item];
   });
 
-  // Update Floating Cart
-  const floatingEl = document.getElementById("cartTotal");
-  if (floatingEl) floatingEl.innerText = `₹${total}`;
+  // Update the side floating cart total
+  const floatingTotalEl = document.getElementById("cartTotal");
+  if (floatingTotalEl) floatingTotalEl.innerText = `₹${total}`;
 
-  // Update Nav Cart (New ID)
-  const navEl = document.getElementById("navCartTotal");
-  if (navEl) navEl.innerText = `₹${total}`;
+  // Update the navigation cart total
+  const navTotalEl = document.getElementById("navCartTotal");
+  if (navTotalEl) navTotalEl.innerText = `₹${total}`;
 }
 
 function increase(item) {
@@ -112,15 +112,11 @@ function clearCart() {
 
 function updateCartTotalUI() {
   let total = 0;
-
   Object.keys(cart).forEach(item => {
     total += menuData[item].price * cart[item];
   });
 
-  const totalEl = document.getElementById("cartTotal");
   const cartBtn = document.getElementById("floatingCart");
-
-  if (totalEl) totalEl.innerText = `₹${total}`;
 
   if (cartBtn) {
     if (total === 0) {

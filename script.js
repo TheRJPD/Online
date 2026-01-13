@@ -1,5 +1,5 @@
 const menuData = {
-  "Paneer Tikka": { price: 300, category: "Starter Veg" },
+  "Paneer Tikka": {portions: { "Half": 150, "Full": 300 }, category: "Starter Veg"},
   "Veg Spring Roll": { price: 200, category: "Starter Veg" },
   "Chicken Tikka": { price: 350, category: "Starter Non-Veg" },
   "Fish Amritsari": { price: 400, category: "Starter Non-Veg" },

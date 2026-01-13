@@ -1,71 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | The Rajputana Darbar</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-<a href="order.html" class="floating-cart-top" id="floatingCart">
-  🛒 <span id="cartTotal">₹0</span>
-</a>
+  <a href="order.html" class="floating-cart-top" id="floatingCart">
+    🛒 <span id="cartTotal">₹0</span>
+  </a>
 
-<nav>
-  <a href="index.html"><img src="logo.png" alt="Logo" class="nav-logo"></a>
-  <a href="index.html">Home</a>
-  <a href="menu.html">Menu</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="order.html">Order Cart</a>
-</nav>
-
-<main class="content-wrapper">
-
-  <section>
-    <h2>Menu</h2>
-
-    <h3>Starter - Veg</h3>
-    <div class="item">
-      Paneer Tikka ₹300
-      <div class="qty-control">
-        <button class="qty-btn" onclick="decrease('Paneer Tikka')">−</button>
-        <span class="qty-number" id="qty-Paneer Tikka">0</span>
-        <button class="qty-btn" onclick="increase('Paneer Tikka')">+</button>
-      </div>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="nav-logo">
+      </a>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html">Order Cart</a>
     </div>
+  </nav>
 
-    <div class="item">
-      Veg Spring Roll ₹200
-      <div class="qty-control">
-        <button class="qty-btn" onclick="decrease('Veg Spring Roll')">−</button>
-        <span class="qty-number" id="qty-Veg Spring Roll">0</span>
-        <button class="qty-btn" onclick="increase('Veg Spring Roll')">+</button>
+  <main class="content-wrapper">
+    <section>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h2>Our Royal Menu</h2>
+        <p>Select your favorite dishes to add to your order.</p>
       </div>
-    </div>
 
-    <h3>Starter - Non Veg</h3>
-    <div class="item">
-      Chicken Tikka ₹350
-      <div class="qty-control">
-        <button class="qty-btn" onclick="decrease('Chicken Tikka')">−</button>
-        <span class="qty-number" id="qty-Chicken Tikka">0</span>
-        <button class="qty-btn" onclick="increase('Chicken Tikka')">+</button>
+      <h3>Starter - Veg</h3>
+      <div class="item">
+        Paneer Tikka <span class="price">₹300</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="decrease('Paneer Tikka')">−</button>
+          <span class="qty-number" id="qty-Paneer Tikka">0</span>
+          <button class="qty-btn" onclick="increase('Paneer Tikka')">+</button>
+        </div>
       </div>
-    </div>
 
-    <h3>Main Course - Veg</h3>
-    <div class="item">
-      Dal Makhani ₹250
-      <div class="qty-control">
-        <button class="qty-btn" onclick="decrease('Dal Makhani')">−</button>
-        <span class="qty-number" id="qty-Dal Makhani">0</span>
-        <button class="qty-btn" onclick="increase('Dal Makhani')">+</button>
+      <div class="item">
+        Veg Spring Roll <span class="price">₹200</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="decrease('Veg Spring Roll')">−</button>
+          <span class="qty-number" id="qty-Veg Spring Roll">0</span>
+          <button class="qty-btn" onclick="increase('Veg Spring Roll')">+</button>
+        </div>
       </div>
-    </div>
-  </section>
-  
-  <footer>© 2026 The Rajputana Darbar</footer>
-</main>
-</body>
-</html>
+
+      <h3>Starter - Non Veg</h3>
+      <div class="item">
+        Chicken Tikka <span class="price">₹350</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="decrease('Chicken Tikka')">−</button>
+          <span class="qty-number" id="qty-Chicken Tikka">0</span>
+          <button class="qty-btn" onclick="increase('Chicken Tikka')">+</button>
+        </div>
+      </div>
+
+      <div class="item">
+        Fish Amritsari <span class="price">₹400</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="decrease('Fish Amritsari')">−</button>
+          <span class="qty-number" id="qty-Fish Amritsari">0</span>
+          <button class="qty-btn" onclick="increase('Fish Amritsari')">+</button>
+        </div>
+      </div>
+
+      <h3>Main Course - Veg</h3>
+      <div class="item">
+        Dal Makhani <span class="price">₹250</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="decrease('Dal Makhani

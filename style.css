@@ -96,7 +96,7 @@ nav a {
 /* Floating cart */
 .floating-cart-top {
   position: fixed;
-  top: 12px;            /* Increased from 3px to avoid overlapping nav text */
+  top: 10px;            /* Increased from 3px to avoid overlapping nav text */
   right: 15px;
   background: #ffffff;
   color: #8b0000;

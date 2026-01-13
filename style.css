@@ -93,28 +93,51 @@ nav a {
   cursor: pointer;
 }
 
-/* Floating cart */
-.floating-cart-top {
+/* Navigation Cart Link */
+.nav-cart-link {
+  color: #ffcc00 !important; /* Distinct color for the cart in nav */
+  font-weight: bold;
+}
+
+/* Floating Cart - Right Middle Position */
+.floating-cart-middle {
   position: fixed;
-  top: 10px;            /* Increased from 3px to avoid overlapping nav text */
-  right: 15px;
-  background: #ffffff;
-  color: #8b0000;
-  padding: 8px 16px;
-  border-radius: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centers it vertically */
+  background: #8b0000;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 30px 0 0 30px; /* Rounded on the left side only */
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 10001;       /* Ensure it is higher than the nav (z-index: 1000) */
+  box-shadow: -2px 4px 10px rgba(0,0,0,0.3);
+  z-index: 10001;
   display: flex;
   align-items: center;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.floating-cart-top:hover {
-  transform: scale(1.05);
+.floating-cart-middle:hover {
+  padding-right: 25px; /* Slides out slightly on hover */
 }
 
+/* Hidden state when cart is empty */
+.floating-cart-hidden {
+  display: none !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .floating-cart-middle {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .nav-cart-link {
+    display: none; /* Hide nav cart on mobile to save space, keep floating cart */
+  }
+}
 /* --- Fixed Footer --- */
 footer {
   text-align: center;

@@ -114,7 +114,7 @@ input {
   width: 100%;
   margin: 6px 0;
 }
-
+/*
 .home-logo {
   text-align: left;
   margin: 20px 0;
@@ -122,6 +122,28 @@ input {
 
 .home-logo img {
   width: 100px;
+}
+*/
+
+/* Navigation Logo Styling */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  height: 40px; /* Adjust height to fit your nav bar */
+  vertical-align: middle;
+}
+
+/* Ensure nav padding accounts for the logo */
+nav {
+  background: #8b0000;
+  padding: 5px 10px;
+  text-align: center;
 }
 
 footer {

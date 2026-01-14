@@ -261,12 +261,19 @@ input, textarea {
   .nav-container a {
     font-size: 0.75rem; /* Compact text for very small screens */
   }
-
+/*
   .floating-cart-middle {
     padding: 5px 12px;
     font-size: 0.85rem;
   }
-
+*/
+@media (max-width: 480px) {
+  .floating-cart-middle {
+    padding: 3px 10px; /* Extra small for mobile */
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+}
 
 /* QR section starts */
 

@@ -46,21 +46,17 @@ function updateUI() {
   const cartBtn = document.getElementById("floatingCart");
   const cartTotalDisplay = document.getElementById("cartTotal");
 
-  // Update the text
   if (cartTotalDisplay) {
     cartTotalDisplay.innerText = `₹${total}`;
   }
-  
-  // Toggle visibility
+
   if (cartBtn) {
     if (total > 0) {
-      cartBtn.classList.remove("hidden"); // Show it
+      cartBtn.classList.remove("hidden");
     } else {
-      cartBtn.classList.add("hidden");    // Hide it if empty
+      cartBtn.classList.add("hidden");
     }
   }
-  
-  console.log("Current Total:", total); // Check your browser console (F12) to see this
 }
 
 function saveCart() {
@@ -154,50 +150,27 @@ function sendWhatsApp() {
   window.location.href = "index.html";
 }
 
-/*
+// Single Initializer
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Cart and UI
   updateUI();
   updateMenuQtyDisplay();
   if (document.getElementById("cartItems")) renderCart();
-});
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  // ... your existing initialization (updateUI, etc.)
-  updateUI();
-  updateMenuQtyDisplay();
-  if (document.getElementById("cartItems")) renderCart();
-  
-  // Automatic Navigation Highlighting logic
+  // Navigation Highlighting Logic
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-container a");
+  
+  // Use a specific ID for text links (mainNav) to avoid highlighting the logo
+  const navLinks = document.querySelectorAll("#mainNav a");
 
   navLinks.forEach(link => {
     const linkPath = link.getAttribute("href");
     
-    // Remove existing active classes first
-    link.classList.remove("active");
-
-    // Compare link href with current filename
-    if (linkPath === currentPath) {
+    // Check for exact match or index.html fallback
+    if (linkPath === currentPath || (currentPath === "" && linkPath === "index.html")) {
       link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
   });
-});
-*/
-
-document.addEventListener("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".nav-container a");
-
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute("href");
-        if (linkPath === currentPath) {
-            link.classList.add("active");
-        }
-        // Handle the case for the home page if path is empty
-        if (currentPath === "" && linkPath === "index.html") {
-            link.classList.add("active");
-        }
-    });
 });

@@ -149,7 +149,7 @@ function sendWhatsApp() {
 
   const msg = `*New Order - The Rajputana Darbar*\n\n*Customer:* ${name}\n*Phone:* ${phone}\n*Address:* ${address}\n\n*Items:*\n${orderDetails}\n*Total Amount: ₹${calculateTotal()}*`;
   
-  window.open(`https://wa.me/917795566237?text=${encodeURIComponent(msg)}`);
+  window.open(`https://wa.me/916388442976?text=${encodeURIComponent(msg)}`);
   localStorage.removeItem("cart");
   window.location.href = "index.html";
 }

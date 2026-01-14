@@ -252,7 +252,7 @@ input, textarea {
     gap: 10px;
     padding: 5px;
   }
-
+}
   @media (max-width: 768px) {
   .nav-logo {
     height: 36px;
@@ -266,7 +266,7 @@ input, textarea {
     padding: 5px 12px;
     font-size: 0.85rem;
   }
-}
+
 
 /* QR section starts */
 

@@ -21,82 +21,73 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Spreads Logo, Links, and Cart */
   align-items: center;
   max-width: 1000px;
   margin: auto;
   padding: 0 15px;
+  flex-wrap: nowrap; /* Prevents breaking to new lines */
 }
 
-.nav-container a {
-  color: var(--royal-gold);
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* Wrapper for the text links to keep them together */
+.nav-links {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
-.nav-container a.active {
-  color: #fff; // White text for contrast
-  border-bottom: 2px solid var(--royal-gold);
-  padding-bottom: 2px;
-}
-
-.nav-container a:hover {
-  color: #fff;
-  border-bottom: 2px solid var(--royal-gold);
-  transition: 0.3s;
-}
-
-/*
 .nav-container a {
   color: var(--royal-gold);
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 8px 15px; // Added padding for the box effect
-  border-radius: 8px; // Rounded corners for the box
+  padding: 8px 12px;
+  border-radius: 8px;
   transition: all 0.3s ease;
-  display: inline-block;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
+/* Box Highlight for Active Page */
 .nav-container a.active {
-  background-color: var(--royal-gold); // Gold background //
-  color: var(--deep-black) !important; // Black text for contrast //
+  background-color: var(--royal-gold);
+  color: var(--deep-black) !important;
   box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
 }
 
 .nav-container a:not(.active):hover {
-  background-color: rgba(212, 175, 55, 0.1); // Subtle gold tint //
+  background-color: rgba(212, 175, 55, 0.15);
   color: #fff;
 }
-*/
+
 .nav-logo {
   height: 40px;
   width: auto;
+  flex-shrink: 0;
 }
 
 /* --- Floating Cart Fix --- */
 .floating-cart-middle {
   background: var(--royal-gold);
   color: var(--deep-black) !important;
-  padding: 8px 18px;
+  padding: 8px 15px;
   border-radius: 50px;
-  display: flex; /* Base display state */
+  display: flex;
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.2s, opacity 0.3s;
+  transition: transform 0.2s;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  flex-shrink: 0; /* Prevents cart from squashing */
 }
 
-/* This specifically fixes the "invisible" issue */
 .floating-cart-middle.hidden { 
   display: none !important; 
 }
@@ -153,7 +144,6 @@ nav {
   border-radius: 50%;
   cursor: pointer;
   font-size: 20px;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,11 +179,6 @@ nav {
   color: var(--royal-maroon);
 }
 
-.item-meta { 
-  font-size: 0.85em; 
-  color: #666; 
-}
-
 .item-price { 
   text-align: right; 
   font-weight: bold; 
@@ -210,13 +195,6 @@ nav {
   border-top: 2px solid var(--royal-gold);
 }
 
-.empty-msg {
-  text-align: center;
-  padding: 40px;
-  color: #888;
-  font-style: italic;
-}
-
 /* --- Forms --- */
 input, textarea {
   width: 100%;
@@ -225,11 +203,10 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
-  font-family: inherit;
 }
 
 .btn-order {
-  background: #25D366; /* WhatsApp Green */
+  background: #25D366;
   color: white;
   padding: 15px;
   border: none;
@@ -238,28 +215,27 @@ input, textarea {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background 0.2s;
 }
 
-.btn-order:hover {
-  background: #1ebe57;
-}
-
-/* Specific adjustment for Mobile Screens */
+/* --- Mobile Specific Fixes --- */
 @media (max-width: 480px) {
   .nav-container {
-    gap: 10px;
-    padding: 5px;
+    padding: 0 8px;
   }
   
   .nav-container a {
-    font-size: 0.75rem; /* Compact text for very small screens */
+    font-size: 0.7rem; 
+    padding: 6px 8px;
+  }
+
+  .nav-logo {
+    height: 30px;
   }
 
   .floating-cart-middle {
-    padding: 5px 12px;
-    font-size: 0.85rem;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    gap: 4px;
   }
 }
 

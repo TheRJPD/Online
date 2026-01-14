@@ -33,11 +33,21 @@ function updateUI() {
   const cartBtn = document.getElementById("floatingCart");
   const cartTotalDisplay = document.getElementById("cartTotal");
 
-  if (cartTotalDisplay) cartTotalDisplay.innerText = `₹${total}`;
-  
-  if (cartBtn) {
-    total > 0 ? cartBtn.classList.remove("hidden") : cartBtn.classList.add("hidden");
+  // Update the text
+  if (cartTotalDisplay) {
+    cartTotalDisplay.innerText = `₹${total}`;
   }
+  
+  // Toggle visibility
+  if (cartBtn) {
+    if (total > 0) {
+      cartBtn.classList.remove("hidden"); // Show it
+    } else {
+      cartBtn.classList.add("hidden");    // Hide it if empty
+    }
+  }
+  
+  console.log("Current Total:", total); // Check your browser console (F12) to see this
 }
 
 function saveCart() {

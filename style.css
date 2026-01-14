@@ -31,7 +31,7 @@ nav {
   margin: auto;
   padding: 0 15px;
 }
-/*
+
 .nav-container a {
   color: var(--royal-gold);
   text-decoration: none;
@@ -45,7 +45,8 @@ nav {
   border-bottom: 2px solid var(--royal-gold);
   padding-bottom: 2px;
 }
-*/
+
+/*
 .nav-container a {
   color: var(--royal-gold);
   text-decoration: none;
@@ -68,7 +69,7 @@ nav {
   background-color: rgba(212, 175, 55, 0.1); /* Subtle gold tint */
   color: #fff;
 }
-
+*/
 .nav-logo {
   height: 40px;
   width: auto;

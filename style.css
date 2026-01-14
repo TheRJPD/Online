@@ -39,13 +39,13 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+/*
 .nav-container a.active {
   color: #fff; // White text for contrast
   border-bottom: 2px solid var(--royal-gold);
   padding-bottom: 2px;
 }
-
+*/
 /*
 .nav-container a {
   color: var(--royal-gold);
@@ -53,20 +53,20 @@ nav {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 8px 15px; /* Added padding for the box effect */
-  border-radius: 8px; /* Rounded corners for the box */
+  padding: 8px 15px; // Added padding for the box effect
+  border-radius: 8px; // Rounded corners for the box
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 .nav-container a.active {
-  background-color: var(--royal-gold); /* Gold background */
-  color: var(--deep-black) !important; /* Black text for contrast */
+  background-color: var(--royal-gold); // Gold background //
+  color: var(--deep-black) !important; // Black text for contrast //
   box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
 }
 
 .nav-container a:not(.active):hover {
-  background-color: rgba(212, 175, 55, 0.1); /* Subtle gold tint */
+  background-color: rgba(212, 175, 55, 0.1); // Subtle gold tint //
   color: #fff;
 }
 */

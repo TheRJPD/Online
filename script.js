@@ -185,3 +185,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-container a");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        }
+        // Handle the case for the home page if path is empty
+        if (currentPath === "" && linkPath === "index.html") {
+            link.classList.add("active");
+        }
+    });
+});
